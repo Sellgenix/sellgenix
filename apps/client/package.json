@@ -13,6 +13,7 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
+    "@sellgenix/ai": "workspace:*",
     "@sellgenix/api": "workspace:*",
     "@sellgenix/auth": "workspace:*",
     "@sellgenix/db": "workspace:*",
