@@ -1,12 +1,12 @@
 import { createEnv } from "@t3-oss/env-nextjs";
-import * as dotenv from "dotenv";
+// import * as dotenv from "dotenv";
 import { z } from "zod";
 
-if (process.env.DATABASE_URL === undefined) {
-  dotenv.config({
-    path: "../../.env",
-  });
-}
+// if (process.env.DATABASE_URL === undefined) {
+//   dotenv.config({
+//     path: "../../.env",
+//   });
+// }
 
 export const env = createEnv({
   client: {},
@@ -26,6 +26,7 @@ export const env = createEnv({
     ),
     DATABASE_URL: z.string().url(),
     DATABASE_PREFIX: z.string().default(""),
+    OPENAPI_KEY: z.string(),
   },
   shared: {
     VERCEL_URL: z
@@ -43,6 +44,7 @@ export const env = createEnv({
     PORT: process.env.PORT,
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_PREFIX: process.env.DATABASE_PREFIX,
+    OPENAPI_KEY: process.env.OPENAPI_KEY,
   },
   skipValidation:
     !!process.env.CI ||

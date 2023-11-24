@@ -3,30 +3,21 @@
   "private": true,
   "version": "0.1.0",
   "exports": {
-    ".": "./index.ts"
+    ".": "./src/index.ts"
   },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "src/*"
-      ]
-    }
-  },
+  "types": "./src/index.ts",
   "license": "MIT",
   "scripts": {
     "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
-    "build": "tsup",
     "clean": "rm -rf .turbo node_modules",
-    "dev": "tsup --watch",
     "lint": "eslint",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@sellgenix/eslint-config": "0.2.0",
+    "@sellgenix/eslint-config": "workspace:*",
     "@sellgenix/prettier-config": "workspace:*",
     "@sellgenix/tsconfig": "workspace:*",
     "eslint": "^8.47.0",
-    "tsup": "^6.6.0",
     "typescript": "^5.1.6"
   },
   "eslintConfig": {
@@ -36,6 +27,7 @@
   },
   "prettier": "@sellgenix/prettier-config",
   "dependencies": {
+    "@sellgenix/env": "workspace:*",
     "openai": "^4.19.1"
   }
 }

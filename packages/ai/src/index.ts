@@ -1,10 +1,14 @@
 import OpenAI from "openai";
 
-const openai = new OpenAI();
+import { env } from "@sellgenix/env";
+
+const openai = new OpenAI({
+  apiKey: env.OPENAPI_KEY,
+});
 
 export async function querySmartDesk(message: string) {
   const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: message }],
+    messages: [{ role: "user", content: message }],
     model: "ft:gpt-3.5-turbo-1106:personal:smartdesk:8MgOoRe5",
   });
   console.log(completion);

@@ -126,12 +126,15 @@ importers:
 
   packages/ai:
     dependencies:
+      '@sellgenix/env':
+        specifier: workspace:*
+        version: link:../env
       openai:
         specifier: ^4.19.1
         version: 4.19.1
     devDependencies:
       '@sellgenix/eslint-config':
-        specifier: 0.2.0
+        specifier: workspace:*
         version: link:../../tooling/eslint
       '@sellgenix/prettier-config':
         specifier: workspace:*
@@ -142,9 +145,6 @@ importers:
       eslint:
         specifier: ^8.47.0
         version: 8.54.0
-      tsup:
-        specifier: ^6.6.0
-        version: 6.7.0(typescript@5.3.2)
       typescript:
         specifier: ^5.1.6
         version: 5.3.2
@@ -6652,42 +6652,6 @@ packages:
       sucrase: 3.34.0
       tree-kill: 1.2.2
       typescript: 5.2.2
-    transitivePeerDependencies:
-      - supports-color
-      - ts-node
-    dev: true
-
-  /tsup@6.7.0(typescript@5.3.2):
-    resolution: {integrity: sha512-L3o8hGkaHnu5TdJns+mCqFsDBo83bJ44rlK7e6VdanIvpea4ArPcU3swWGsLVbXak1PqQx/V+SSmFPujBK+zEQ==}
-    engines: {node: '>=14.18'}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': ^1
-      postcss: ^8.4.12
-      typescript: '>=4.1.0'
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      postcss:
-        optional: true
-      typescript:
-        optional: true
-    dependencies:
-      bundle-require: 4.0.2(esbuild@0.17.19)
-      cac: 6.7.14
-      chokidar: 3.5.3
-      debug: 4.3.4
-      esbuild: 0.17.19
-      execa: 5.1.1
-      globby: 11.1.0
-      joycon: 3.1.1
-      postcss-load-config: 3.1.4
-      resolve-from: 5.0.0
-      rollup: 3.29.4
-      source-map: 0.8.0-beta.0
-      sucrase: 3.34.0
-      tree-kill: 1.2.2
-      typescript: 5.3.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
