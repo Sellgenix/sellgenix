@@ -1,34 +1,23 @@
 {
-  "name": "@sellgenix/env",
+  "name": "@sellgenix/analytics",
   "private": true,
   "version": "0.1.0",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "import": "./dist/index.js",
-    "node": "./dist/index.js",
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.js"
+    ".": "./index.ts"
   },
+  "types": "./index.ts",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
-    "build": "tsup",
-    "clean": "rm -rf .turbo node_modules dist",
+    "clean": "rm -rf .turbo node_modules",
     "lint": "eslint",
-    "dev": "tsup --watch",
     "type-check": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@t3-oss/env-nextjs": "^0.7.1",
-    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@sellgenix/eslint-config": "workspace:*",
     "@sellgenix/prettier-config": "workspace:*",
     "@sellgenix/tsconfig": "workspace:*",
     "eslint": "^8.47.0",
-    "tsup": "^8.0.1",
     "typescript": "^5.1.6"
   },
   "eslintConfig": {
@@ -36,5 +25,9 @@
       "@sellgenix/eslint-config/base"
     ]
   },
-  "prettier": "@sellgenix/prettier-config"
+  "prettier": "@sellgenix/prettier-config",
+  "dependencies": {
+    "@sellgenix/env": "workspace:*",
+    "posthog-node": "^3.1.3"
+  }
 }

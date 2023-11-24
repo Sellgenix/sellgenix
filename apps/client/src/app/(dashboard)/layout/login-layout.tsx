@@ -1,7 +1,8 @@
 import { Box, Button, Card, Flex, Grid, Text } from "@radix-ui/themes";
 import { IconBrandDiscordFilled } from "@tabler/icons-react";
 
-import { signIn, type EnabledProviders } from "@sellgenix/auth";
+import { signIn } from "@sellgenix/auth";
+import type { EnabledProviders } from "@sellgenix/auth";
 
 import { LoginLayoutTabs } from "./login-layout-tabs";
 

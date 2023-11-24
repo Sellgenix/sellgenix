@@ -17,7 +17,7 @@ const AnalysisViewSkeleton = () => {
               Type
             </Text>
             <Text color="red" className="!leading-tight">
-              We've considered that this email is a spam. Please check the
+              We&apos;ve considered that this email is a spam. Please check the
               summary below.
             </Text>
           </Box>
@@ -33,7 +33,7 @@ const AnalysisViewSkeleton = () => {
               Sureness
             </Text>
             <Text className="!leading-tight">
-              We're{" "}
+              We&apos;re{" "}
               <Text weight="bold" size="6">
                 97%
               </Text>{" "}
