@@ -22,6 +22,7 @@ export const env = createEnv({
     ),
     DATABASE_URL: z.string().url(),
     DATABASE_PREFIX: z.string().default(""),
+    OPENAPI_KEY: z.string(),
   },
   shared: {
     VERCEL_URL: z
@@ -39,6 +40,7 @@ export const env = createEnv({
     PORT: process.env.PORT,
     DATABASE_URL: process.env.DATABASE_URL,
     DATABASE_PREFIX: process.env.DATABASE_PREFIX,
+    OPENAPI_KEY: process.env.OPENAPI_KEY,
     NEXT_PUBLIC_POSTHOG_API_KEY: process.env.NEXT_PUBLIC_POSTHOG_API_KEY,
   },
   skipValidation:

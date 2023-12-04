@@ -14,6 +14,7 @@
   "dependencies": {
     "@sellgenix/analytics": "workspace:*",
     "@sellgenix/auth": "workspace:*",
+    "@sellgenix/ai": "workspace:*",
     "@sellgenix/db": "workspace:*",
     "@sellgenix/env": "workspace:*",
     "@trpc/client": "next",
