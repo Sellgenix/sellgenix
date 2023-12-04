@@ -8,7 +8,7 @@ const openai = new OpenAI({
 
 type Importance = "low" | "medium" | "high" | "urgent";
 
-type EmailType =
+export type EmailType =
   | "product_information_request"
   | "order_modification"
   | "order_delivery_address_correction"
